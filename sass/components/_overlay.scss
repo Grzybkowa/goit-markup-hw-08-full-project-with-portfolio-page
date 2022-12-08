@@ -27,6 +27,17 @@
     color: var(--secondary-color);
   }
 }
+
+@media screen and (max-width: #{$miniMobile}) {
+  .portfolio-card {
+    &:hover {
+      & .overlay {
+        display: none;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: #{$tablet}) {
   .overlay {
     width: 354px;
