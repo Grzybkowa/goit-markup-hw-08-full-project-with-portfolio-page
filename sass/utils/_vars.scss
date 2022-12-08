@@ -1,0 +1,46 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+:root {
+  --first-dark: #000000;
+  --main-color: #212121;
+  --primary-color: #2196f3;
+  --secondary-color: #ffffff;
+  --tertiary-color: #2f303a;
+  --quaternary-color: #f5f4fa;
+  --quinary-color: #757575;
+}
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  max-width: 100%;
+  background: var(--secondary-color);
+  color: var(--main-color);
+  font-family: "Roboto", sans-serif;
+}

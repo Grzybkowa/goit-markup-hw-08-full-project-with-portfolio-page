@@ -1,0 +1,28 @@
+.social-icons {
+  width: 100%;
+  background: var(--secondary-color);
+  padding: 16px 0px;
+  display: inline-flex;
+  justify-content: center;
+  gap: 10px;
+
+  &__type {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    fill: var(--quinary-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 250ms;
+    transition-property: color, background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--primary-color);
+      --color1: var(--secondary-color);
+    }
+  }
+}

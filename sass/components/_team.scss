@@ -1,0 +1,109 @@
+@import "../utils/vars";
+
+.wrapper-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+}
+
+.team-member {
+  width: 100%;
+  max-width: 450px;
+}
+
+.team-img {
+  max-width: 100%;
+}
+
+.team {
+  width: 100%;
+  background-color: var(--quaternary-color);
+
+  &__card {
+    padding: 30px;
+    width: 100%;
+  }
+
+  &__memeber-photo {
+    max-width: 450px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background: var(--secondary-color);
+    box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+      0px 1px 3px 0px #0000001f;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin: 0;
+    transition-duration: 250ms;
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 30px;
+  }
+
+  &__memeber-details {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+
+    &--role {
+      font-weight: 400;
+      color: var(--quinary-color);
+    }
+
+    &--name {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: #{$tablet}) {
+  .team-member {
+    width: 100%;
+    max-width: 354px;
+  }
+
+  .wrapper-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 738px;
+  }
+
+  .team__member-photo {
+    max-width: 354px;
+  }
+}
+
+@media screen and (min-width: #{$desktop}) {
+  .team-member {
+    width: 100%;
+    max-width: 270px;
+  }
+
+  .wrapper-team {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 1170px;
+  }
+
+  .team {
+    gap: 50px;
+
+    &__memeber-photo {
+      max-width: 270px;
+      display: inline-block;
+    }
+  }
+}

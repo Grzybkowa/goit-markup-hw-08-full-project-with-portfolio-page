@@ -1,0 +1,28 @@
+.navigation {
+  display: flex;
+  gap: 46px;
+  flex-direction: row;
+
+  &__link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--main-color);
+
+    &--active {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: 4px;
+        width: 100%;
+        background-color: var(--primary-color);
+        bottom: -32px;
+        border-radius: 2px;
+      }
+    }
+  }
+}

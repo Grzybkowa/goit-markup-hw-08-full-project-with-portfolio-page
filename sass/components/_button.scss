@@ -1,0 +1,22 @@
+.button {
+  padding: 10px 42px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  margin: auto;
+
+  &--with-icon {
+    padding: 10px 24px 10px 42px;
+    gap: 24px;
+  }
+}

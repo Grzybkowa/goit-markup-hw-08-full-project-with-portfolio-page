@@ -1,0 +1,95 @@
+@import "../utils/vars";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 118px 57px;
+  gap: 30px;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  background-image: linear-gradient(
+      0deg,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/background-mobile.jpg");
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background-mobile@2x.jpg");
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.61;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--secondary-color);
+  }
+}
+
+@media screen and (min-width: #{$tablet}) {
+  .hero {
+    padding: 118px 202px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image: linear-gradient(
+        0deg,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background-tablet.jpg");
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/background-tablet@2x.jpg");
+    }
+  }
+}
+
+@media screen and (min-width: #{$desktop}) {
+  .hero {
+    padding: 200px;
+    max-width: 1600px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image: linear-gradient(
+        0deg,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background.jpg");
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/background-desktop@2x.jpg);
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 1.36;
+      max-width: 700px;
+    }
+  }
+}

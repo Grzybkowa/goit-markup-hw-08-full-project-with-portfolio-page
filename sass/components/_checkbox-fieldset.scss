@@ -1,0 +1,67 @@
+@import "../utils/vars";
+
+.checkbox-fieldset {
+  max-width: 450px;
+  width: 100%;
+  background-size: cover;
+  margin: 0 auto;
+  border: none;
+  padding: 0;
+  margin-bottom: 30px;
+
+  &__link {
+    color: var(--primary-color);
+  }
+
+  &__label {
+    flex-wrap: wrap;
+    align-items: center;
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: var(--quinary-color);
+    justify-content: center;
+  }
+
+  &__input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    &:checked + .checkbox-fieldset__checkmark {
+      border: 0;
+    }
+
+    &:checked + .checkbox-fieldset__checkmark > svg {
+      display: block;
+    }
+  }
+
+  &__checkmark {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--main-color);
+    border-radius: 2px;
+    display: block;
+    margin-right: 8px;
+
+    & > svg {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: #{$desktop}) {
+  .checkbox-fieldset {
+    max-width: 448px;
+    &__label {
+      flex-wrap: nowrap;
+      display: flex;
+      font-size: 14px;
+      line-height: 1.71;
+    }
+  }
+}

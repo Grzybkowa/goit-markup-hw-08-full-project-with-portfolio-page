@@ -1,0 +1,54 @@
+.portfolio-button-list {
+  column-gap: 8px;
+  row-gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  max-width: 100%;
+  // max-width: 450px;
+  margin-bottom: 40px;
+
+  &__button {
+    padding: 6px 25px;
+    border: 0px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: var(--quaternary-color);
+    color: var(--main-color);
+    transition-duration: 250ms;
+    transition-property: background-color, color, box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014,
+        0px 3px 1px 0px #0000001a;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media screen and (min-width:#{$tablet}) {
+  .portfolio-button-list {
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: #{$desktop}) {
+  .portfolio-button-list {
+    margin-bottom: 50px;
+  }
+}

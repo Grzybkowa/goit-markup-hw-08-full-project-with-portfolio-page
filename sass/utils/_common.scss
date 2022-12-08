@@ -1,0 +1,140 @@
+@import "../utils/vars";
+
+.wrapper {
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+}
+
+.section {
+  padding: 60px 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+  gap: 30px;
+}
+
+.hover-link:hover,
+.hover-link:active {
+  color: var(--primary-color);
+}
+
+.hover-link {
+  display: inline-flex;
+  align-items: center;
+  transition-duration: 250ms;
+  transition-property: color, fill;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover .top-bar__contact-icon {
+    fill: var(--primary-color);
+  }
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.title-h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--main-color);
+  margin-bottom: 30px;
+}
+
+.title-h3 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.display-flex {
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (min-width: #{$tablet}) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 738px;
+  }
+
+  .wrapper {
+    max-width: 738px;
+    padding: 0;
+  }
+
+  .section {
+    padding: 60px 15px;
+  }
+}
+
+@media screen and (min-width: #{$desktop}) {
+  .row {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-basis: calc((100% - (9 * 10%)) / 9);
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 1170px;
+  }
+
+  .wrapper {
+    max-width: 1170px;
+    padding: 0;
+  }
+
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .title-h2 {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
+
+  .title-h3 {
+    text-align: start;
+  }
+}
