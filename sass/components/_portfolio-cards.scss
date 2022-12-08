@@ -77,6 +77,16 @@
   }
 }
 
+@media screen and (max-width: 380px) {
+  .portfolio-card {
+    &:hover {
+      & .overlay {
+        display: none;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: #{$tablet}) {
   .portfolio-card {
     max-width: 354px;

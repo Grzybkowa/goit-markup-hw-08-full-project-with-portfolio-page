@@ -22,18 +22,22 @@
     letter-spacing: 0.03em;
     text-align: left;
     padding-top: 49px;
-    padding-left: 24px;
+    padding-left: 45px;
     padding-right: 45px;
     color: var(--secondary-color);
   }
 }
 
-@media screen and (max-width: #{$miniMobile}) {
-  .portfolio-card {
-    &:hover {
-      & .overlay {
-        display: none;
-      }
+@media screen and (min-width: 381px) and (max-width: 440px) {
+  .overlay {
+    &__text {
+      width: 360px;
+      width: 100%;
+      font-size: 15px;
+      text-align: left;
+      padding-top: 15px;
+      padding-left: 105px;
+      padding-right: 90px;
     }
   }
 }
@@ -41,6 +45,9 @@
 @media screen and (min-width: #{$tablet}) {
   .overlay {
     width: 354px;
+    &__text {
+      padding-left: 24px;
+    }
   }
 }
 
